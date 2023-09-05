@@ -1,43 +1,31 @@
 import React from "react";
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
-import styles from "./index.module.css";
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
+export default function Hello() {
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">ITS DAVID</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
-          >
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
+    <Layout title="Hello" description="Hello React Page">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          maxWidth: "900px",
+          margin: "0 auto",
+          padding: "20px",
+          borderTop: "2px solid #ff42cd", // Add a top border
+          borderBottom: "2px solid #ff42cd",
+        }}
+      >
+        <h1>David Clinton</h1>
+        <p>
+          Hi there, I'm David. I'm a Frontend Engineer from Kenya. I'm currently
+          working at Untapped Global.
+        </p>
+        <p>
+          This is my blog where I write about many things, including, but not
+          limited to React, UI Libraries, JavaScript, Chakra UI and many more
+          web dev related topics.
+        </p>
       </div>
-    </header>
-  );
-}
-
-export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <Layout
-      title={`ItS DAVID`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
     </Layout>
   );
 }
