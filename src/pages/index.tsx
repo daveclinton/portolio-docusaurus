@@ -37,6 +37,19 @@ export default function Hello() {
           web dev related topics.
         </p>
       </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "100%",
+          maxWidth: "900px",
+          margin: "0 auto",
+          padding: "20px",
+          borderBottom: "2px solid #ff42cd",
+        }}
+      >
+        <h3>Featured Posts</h3>
+      </div>
     </Layout>
   );
 }
