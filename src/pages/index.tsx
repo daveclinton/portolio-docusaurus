@@ -2,6 +2,10 @@ import React from "react";
 import Layout from "@theme/Layout";
 import { InlineIcon } from "@iconify/react";
 
+const recentPosts = require("../../.docusaurus/docusaurus-plugin-content-blog/default/blog-post-list-prop-default.json");
+
+console.log(recentPosts);
+
 export default function Hello() {
   return (
     <Layout title="Hello" description="Hello React Page">
@@ -49,6 +53,13 @@ export default function Hello() {
         }}
       >
         <h3>Featured Posts</h3>
+        <ul>
+          {recentPosts.items.slice(0, 5).map((item, index) => (
+            <li key={index}>
+              <a href={`${item.permalink}`}>{item.title}</a>{" "}
+            </li>
+          ))}
+        </ul>
       </div>
     </Layout>
   );
