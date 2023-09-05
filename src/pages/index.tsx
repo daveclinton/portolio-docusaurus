@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "@theme/Layout";
+import { InlineIcon } from "@iconify/react";
 
 export default function Hello() {
   return (
@@ -11,11 +12,21 @@ export default function Hello() {
           maxWidth: "900px",
           margin: "0 auto",
           padding: "20px",
-          borderTop: "2px solid #ff42cd", // Add a top border
+          borderTop: "2px solid #ff42cd",
           borderBottom: "2px solid #ff42cd",
         }}
       >
-        <h1>David Clinton</h1>
+        <div style={{ display: "flex", alignItems: "baseline", gap: "10px" }}>
+          <h1>David Clinton</h1>
+          <a href="https://www.linkedin.com/in/clintondavid46/">
+            <InlineIcon
+              icon="ic:baseline-person-add-alt"
+              style={{ color: "#ff42cd" }}
+              height="30"
+            />
+          </a>
+        </div>
+
         <p>
           Hi there, I'm David. I'm a Frontend Engineer from Kenya. I'm currently
           working at Untapped Global.
